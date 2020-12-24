@@ -1,0 +1,260 @@
+syntax = "proto3";
+
+package article;
+
+import "github.com/metaverse/truss/deftree/googlethirdparty/annotations.proto";
+
+service Article {
+    //文章详情
+    rpc Detail (DetailRequest) returns (DetailResponse) {
+        option (google.api.http) = {
+          get: "/detail"
+
+          additional_bindings {
+            // Trailing slashes are different routes
+            get: "/detail/"
+          }
+        };
+    }
+
+    //文章列表
+    rpc Records (RecordsRequest) returns (RecordsResponse) {
+        option (google.api.http) = {
+          // All fields (In) are query parameters of the http request unless otherwise specified
+          get: "/records"
+
+          additional_bindings {
+            // Trailing slashes are different routes
+            get: "/records/"
+          }
+        };
+    }
+
+    //删除文章
+    rpc Remove (RemoveRequest) returns (RemoveResponse) {
+        option (google.api.http) = {
+          // All fields (In) are query parameters of the http request unless otherwise specified
+          get: "/remove"
+
+          additional_bindings {
+            // Trailing slashes are different routes
+            get: "/remove/"
+          }
+        };
+    }
+
+    //置顶文章
+    rpc Top (TopRequest) returns (TopResponse) {
+        option (google.api.http) = {
+          // All fields (In) are query parameters of the http request unless otherwise specified
+          get: "/top"
+
+          additional_bindings {
+            // Trailing slashes are different routes
+            get: "/top/"
+          }
+        };
+    }
+
+    //推荐文章
+    rpc Recommends (RecommendsRequest) returns (RecommendsResponse) {
+        option (google.api.http) = {
+          // All fields (In) are query parameters of the http request unless otherwise specified
+          get: "/recommends"
+
+          additional_bindings {
+            // Trailing slashes are different routes
+            get: "/recommends/"
+          }
+        };
+    }
+
+    //审核文章
+    rpc Review (ReviewRequest) returns (ReviewResponse) {
+        option (google.api.http) = {
+          // All fields (In) are query parameters of the http request unless otherwise specified
+          get: "/review"
+
+          additional_bindings {
+            // Trailing slashes are different routes
+            get: "/review/"
+          }
+        };
+    }
+
+    //发布文章
+    rpc Publish (PublishRequest) returns (PublishResponse) {
+        option (google.api.http) = {
+          // All fields (In) are query parameters of the http request unless otherwise specified
+          post: "/publish"
+          body: "*"
+        };
+    }
+
+    //编辑文章
+    rpc Edit (EditRequest) returns (EditResponse) {
+        option (google.api.http) = {
+          // All fields (In) are query parameters of the http request unless otherwise specified
+          post: "/edit"
+          body: "*"
+        };
+    }
+}
+
+message User {
+    string user_id = 1;
+    string username = 2;
+    string heading = 3;
+    string login_at = 4;
+    string login_ip = 5;
+    string desc = 6;
+    string create_at = 7;
+    int32 phone = 8;
+    int32 status = 9;
+    float active_score = 10;
+}
+
+message Detail {
+    string article_id = 1;
+    string category_id = 2;
+    string category_name = 3;
+    string title = 4;
+    string type = 5;
+    string logo = 6;
+    string keywords = 7;
+    string remark = 8;
+    string content = 9;
+    int32 number_likes = 10;
+    int32 number_comments = 11;
+    int32 number_reads = 12;
+    int32 number_collects = 13;
+    int32 status = 14;
+    int32 editor_type = 15;
+    string author = 16;
+    string link = 17;
+    int32 is_top = 18;
+    string create_at = 19;
+    User user = 20;
+}
+
+//文章详情request
+message DetailRequest {
+    string article_id = 1;
+}
+//文章详情response
+message DetailResponse {
+    int32 code = 1;
+    string msg = 2;
+    Detail data = 3;
+}
+
+//文章列表request
+message RecordsRequest {
+    string category_id = 1;
+    string tag_id = 2;
+    string type = 3;
+    int32 page = 4;
+    string sort_type = 5;
+}
+//文章列表response
+message RecordsResponse {
+    int32 code = 1;
+    string msg = 2;
+    repeated Detail data = 3;
+}
+
+//文章删除request
+message RemoveRequest {
+    string article_id = 1;
+}
+//文章删除response
+message RemoveResponse {
+    int32 code = 1;
+    string msg = 2;
+}
+
+//文章置顶request
+message TopRequest {
+    string article_id = 1;
+}
+//文章置顶response
+message TopResponse {
+    int32 code = 1;
+    string msg = 2;
+}
+
+//文章审核request
+message ReviewRequest {
+    string article_id = 1;
+}
+//文章审核response
+message ReviewResponse {
+    int32 code = 1;
+    string msg = 2;
+}
+
+//文章推荐request
+message RecommendsRequest {
+    string category_id = 1;
+    string tag_id = 2;
+    string type = 3;
+    int32 page = 4;
+    string sort_type = 5;
+}
+//文章推荐response
+message RecommendsResponse {
+    int32 code = 1;
+    string msg = 2;
+    repeated Detail data = 3;
+}
+
+//文章发布request
+message PublishRequest {
+    string category_id = 1;
+    string title = 2;
+    string author = 3;
+    string link = 4;
+    string file = 5;
+    string keywords = 6;
+    string remark = 7;
+    string content = 9;
+    int32 editor_type = 8;
+    string code = 10;
+    string type = 11;
+    repeated string tag_ids = 12;
+}
+//文章发布response
+message PublishResponse {
+    int32 code = 1;
+    string msg = 2;
+    message Data {
+        string url = 1;
+    }
+    Data data = 3;
+}
+
+//文章编辑request
+message EditRequest {
+    string article_id = 1;
+    string category_id = 13;
+    string title = 2;
+    string author = 3;
+    string link = 4;
+    string file = 5;
+    string keywords = 6;
+    string remark = 7;
+    string content = 9;
+    int32 editor_type = 8;
+    string code = 10;
+    string type = 11;
+    repeated string tag_ids = 12;
+}
+//文章编辑response
+message EditResponse {
+    int32 code = 1;
+    string msg = 2;
+    message Data {
+        string url = 1;
+    }
+    Data data = 3;
+}

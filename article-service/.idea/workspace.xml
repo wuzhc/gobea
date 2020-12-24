@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3001e3c2-df5d-49b2-a72a-c617b8a050e6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="ProjectId" id="1lxAGRXnmk3MFbPsKp0cvGF7XFu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hello" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/cmd/article" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <proxy>https://goproxy.io</proxy>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="278" y="23" width="800" height="687" key="#GOROOT" timestamp="1608528424832">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="278" y="23" width="800" height="687" key="#GOROOT/0.0.1366.723@0.0.1366.723" timestamp="1608528424832" />
+    <state x="278" y="23" width="800" height="687" key="#Notifications" timestamp="1608540955428">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="278" y="23" width="800" height="687" key="#Notifications/0.0.1366.723@0.0.1366.723" timestamp="1608540955428" />
+    <state x="438" y="167" width="480" height="399" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608532757930">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="438" y="167" width="480" height="399" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.723@0.0.1366.723" timestamp="1608532757930" />
+    <state x="466" y="119" width="424" height="494" key="FileChooserDialogImpl" timestamp="1608712368369">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="466" y="119" width="424" height="494" key="FileChooserDialogImpl/0.0.1366.723@0.0.1366.723" timestamp="1608712368369" />
+    <state x="187" y="0" key="SettingsEditor" timestamp="1608528417594">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="187" y="0" key="SettingsEditor/0.0.1366.723@0.0.1366.723" timestamp="1608528417594" />
+    <state x="294" y="70" width="778" height="582" key="find.popup" timestamp="1608561220867">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="294" y="70" width="778" height="582" key="find.popup/0.0.1366.723@0.0.1366.723" timestamp="1608561220867" />
+    <state x="346" y="44" width="672" height="678" key="search.everywhere.popup" timestamp="1608712595878">
+      <screen x="0" y="0" width="1366" height="723" />
+    </state>
+    <state x="346" y="44" width="672" height="678" key="search.everywhere.popup/0.0.1366.723@0.0.1366.723" timestamp="1608712595878" />
+  </component>
+</project>

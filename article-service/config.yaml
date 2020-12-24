@@ -1,0 +1,30 @@
+service:
+  name: article-svc
+
+database:
+  driver: mysql
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  database: runcode
+  password: 123456
+
+consul:
+  addr: 127.0.0.1:8500
+
+debug:
+  addr: 10.8.8.107:15060
+  ip: 10.8.8.107
+  port: 15060
+
+http:
+  addr: 10.8.8.107:15050
+  ip: 10.8.8.107
+  port: 15050
+  tags: http
+
+grpc:
+  addr: 10.8.8.107:15040
+  ip: 10.8.8.107
+  port: 15040
+  tags: grpc
