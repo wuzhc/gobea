@@ -3,3 +3,5 @@ health
 hello
 test
 user-service
+article-service/config.yaml
+article-service/.idea/
